@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\VoitureRepository")
@@ -36,6 +37,9 @@ class Voiture
      * @ORM\Column(type="integer")
      */
     private $kilometres;
+
+
+
 
     public function getId(): ?int
     {
@@ -89,4 +93,5 @@ class Voiture
 
         return $this;
     }
+
 }

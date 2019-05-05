@@ -15,9 +15,9 @@
 
 
 <div class="example-wrapper">
-    <h1>Bienvenue</h1>
+    <h1>{{ 'salutation'|trans }}</h1>
 
-    <button type="button" class="btn btn-danger"><a href="{{ path('voiture') }}" style="color:black">Voir Voitures</a></button>
+    <button type="button" class="btn btn-danger"><a href="{{ path('voiture') }}" style="color:black">{{ 'voir_voitures'|trans }}</a></button>
     <button type="button" class="btn btn-danger"><a href="{{ path('marque') }}" style="color:black">Voir Marques</a></button>
 
 

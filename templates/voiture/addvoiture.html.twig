@@ -4,5 +4,8 @@
 
 {% block body %}
     <button type="button" class="btn btn-danger"><a href="{{ path('voiture') }}" style="color:black">Retour a la liste de voitures</a></button>
-{{ form(form) }}
+    {{ form_start(form) }}
+
+
+    {{ form_end(form) }}
 {% endblock %}

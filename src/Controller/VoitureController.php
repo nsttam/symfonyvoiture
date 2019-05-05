@@ -25,7 +25,7 @@ class VoitureController extends AbstractController
     /**
      * @Route("/voiture/add", name="voiture-add")
      */
-    public function addVoiture(Request $request){
+    public function addVoiture(Request $request ){
         $form = $this->createForm(VoitureType::class, new Voiture());
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
@@ -42,7 +42,7 @@ class VoitureController extends AbstractController
     }
 
     /**
-     * @Route("/detail/{voiture}", name="voiture-detail", requirements={"pays"="^(?!register).+"})
+     * @Route("/detail/{voiture}", name="voiture-detail", requirements={"voiture"="^(?!register).+"})
      */
     public function detail(Voiture $voiture){
         return $this->render('voiture/voituredetail.html.twig', [
